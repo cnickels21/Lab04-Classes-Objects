@@ -7,7 +7,7 @@ namespace Lab04_TicTacToeTests
     public class Lab04_TicTacToeTests
     {
         [Fact]
-        public void Check_that_turn_switches_after_each_player_plays()
+        public void Check_that_next_turn_is_valid()
         {
             // Arrange
             Player player1 = new Player();
@@ -26,7 +26,7 @@ namespace Lab04_TicTacToeTests
             Player current = testGameBoard.NextPlayer();
 
             // Assert
-            Assert.Equal("Marie", current.Name);
+            Assert.Equal("Chase", current.Name);
         }
     }
 }
