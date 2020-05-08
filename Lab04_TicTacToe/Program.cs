@@ -1,5 +1,6 @@
 ﻿using Lab04_TicTacToe.Classes;
 using System;
+using System.Threading;
 
 namespace Lab04_TicTacToe
 {
@@ -37,14 +38,14 @@ namespace Lab04_TicTacToe
 
             Game newGame = new Game(player1, player2);
             Player winner = newGame.Play();
-            if(winner.Name == "draw")
+            /*if()
             {
                 Console.WriteLine("No one wins, it's a draw!");
             }
             else
             {
                 Console.WriteLine($"Woo! You win, congrats, {winner.Name}");
-            }
+            }*/
 
         }
 

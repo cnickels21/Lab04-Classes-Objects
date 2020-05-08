@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Transactions;
 
 namespace Lab04_TicTacToe.Classes
 {
@@ -48,6 +49,7 @@ namespace Lab04_TicTacToe.Classes
             Use any and all pre-existing methods in this program to help construct the method logic. 
          
 			*/
+			Player current = new Player();
 			int turn = 1;
 			while(!CheckForWinner(Board) && turn < 10)
 			{
@@ -60,13 +62,16 @@ namespace Lab04_TicTacToe.Classes
 			Board.DisplayBoard();
 			if (CheckForWinner(Board))
 			{
-				this.Winner = NextPlayer();
 				return this.Winner;
 			}
 			else
 			{
-				return null;
+				current.Name = "Keith";
+				Console.WriteLine($"Sorry, {current.Name} says no one wins!!");
+				return current;
+				
 			};
+			
 			
 		
 		}
