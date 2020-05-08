@@ -46,33 +46,28 @@ namespace Lab04_TicTacToe.Classes
                 and make sure that the game continues while there are unmarked spots on the board. 
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
-             */
-			/*bool isWinner = false;
-			int count = 0;
-			Player current = new Player();
+         
 			*/
-			/*while (!isWinner)
+			int turn = 1;
+			while(!CheckForWinner(Board) && turn < 10)
 			{
-				count++;
-				SwitchPlayer();
-				Console.Clear();
 				Board.DisplayBoard();
-				current = NextPlayer();
-				bool spaceTaken = false;
-				while (!spaceTaken)
-				{
-					spaceTaken = current.
-				}
-				isWinner = CheckForWinner(Board);
-				//Check if all spaces are taken
-				if(count == 9)
-				{
-					current.Name = "Draw/Tie";
-					isWinner = true;
-				}
+				SwitchPlayer();
+				NextPlayer().TakeTurn(Board);
+				turn++;
+
 			}
-			Winner = current;*/
-			return null;
+			Board.DisplayBoard();
+			if (CheckForWinner(Board))
+			{
+				this.Winner = NextPlayer();
+				return this.Winner;
+			}
+			else
+			{
+				return null;
+			};
+			
 		
 		}
 

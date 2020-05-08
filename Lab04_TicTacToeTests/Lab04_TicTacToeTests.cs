@@ -57,7 +57,7 @@ namespace Lab04_TicTacToeTests
          
             //Act we need players to play and start the game and the testboard
 
-          bool winningGame = startNewGame.CheckForWinner(null);
+            bool winningGame = startNewGame.CheckForWinner(null);
 
             //Assert
             Assert.False(winningGame);
