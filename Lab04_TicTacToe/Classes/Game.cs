@@ -28,12 +28,12 @@ namespace Lab04_TicTacToe.Classes
 		/// Activate the Play of the game
 		/// </summary>
 		/// <returns>Winner</returns>
-		//public Player Play()
-		//{
+		public Player Play()
+		{
 
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.
 
-            /*
+			/*
              * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
              * 
              * A few things to get you started:
@@ -47,7 +47,34 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
-		//}
+			/*bool isWinner = false;
+			int count = 0;
+			Player current = new Player();
+			*/
+			/*while (!isWinner)
+			{
+				count++;
+				SwitchPlayer();
+				Console.Clear();
+				Board.DisplayBoard();
+				current = NextPlayer();
+				bool spaceTaken = false;
+				while (!spaceTaken)
+				{
+					spaceTaken = current.
+				}
+				isWinner = CheckForWinner(Board);
+				//Check if all spaces are taken
+				if(count == 9)
+				{
+					current.Name = "Draw/Tie";
+					isWinner = true;
+				}
+			}
+			Winner = current;*/
+			return null;
+		
+		}
 
 
 		/// <summary>
@@ -74,6 +101,7 @@ namespace Lab04_TicTacToe.Classes
 			// Given all the winning conditions, Determine the winning logic. 
 			for (int i = 0; i < winners.Length; i++)
 			{
+				
 				Position p1 = Player.PositionForNumber(winners[i][0]);
 				Position p2 = Player.PositionForNumber(winners[i][1]);
 				Position p3 = Player.PositionForNumber(winners[i][2]);
@@ -84,7 +112,11 @@ namespace Lab04_TicTacToe.Classes
 
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winner has been reached. 
-			
+				if(a == b && b == c)
+				{
+					return true;
+				}
+
 			}
 
 			return false;

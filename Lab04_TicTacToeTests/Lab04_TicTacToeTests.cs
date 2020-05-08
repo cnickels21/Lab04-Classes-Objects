@@ -43,5 +43,30 @@ namespace Lab04_TicTacToeTests
             // Assert
             Assert.Equal("9", index);
         }
+
+        [Fact]
+        public void GameWinner()
+        {
+            //Arrange
+            
+            Player player1 = new Player();
+            Player player2 = new Player();
+            Game startNewGame = new Game(player1, player2);
+
+            Board testBoard = new Board();
+         
+            //Act we need players to play and start the game and the testboard
+
+          bool winningGame = startNewGame.CheckForWinner(null);
+
+            //Assert
+            Assert.False(winningGame);
+
+        }
+        [Fact]
+        public void Cannot_enter_index_above_nine()
+        {
+            Assert.Null(Player.PositionForNumber(10));
+        }
     }
 }
