@@ -49,23 +49,25 @@ namespace Lab04_TicTacToe.Classes
             Use any and all pre-existing methods in this program to help construct the method logic. 
          
 			*/
-			Player current = new Player();
+			
 			int turn = 1;
 			while(!CheckForWinner(Board) && turn < 10)
 			{
 				Board.DisplayBoard();
-				SwitchPlayer();
 				NextPlayer().TakeTurn(Board);
 				turn++;
+				SwitchPlayer();
 
 			}
 			Board.DisplayBoard();
 			if (CheckForWinner(Board))
 			{
+				Console.WriteLine($"Congrats, {this.Winner} you win!");
 				return this.Winner;
 			}
 			else
 			{
+				Player current = new Player();
 				current.Name = "Keith";
 				Console.WriteLine($"Sorry, {current.Name} says no one wins!!");
 				return current;
