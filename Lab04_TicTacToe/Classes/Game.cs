@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Transactions;
 
 namespace Lab04_TicTacToe.Classes
 {
@@ -28,12 +29,12 @@ namespace Lab04_TicTacToe.Classes
 		/// Activate the Play of the game
 		/// </summary>
 		/// <returns>Winner</returns>
-		//public Player Play()
-		//{
+		public Player Play()
+		{
 
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.
 
-            /*
+			/*
              * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
              * 
              * A few things to get you started:
@@ -46,8 +47,36 @@ namespace Lab04_TicTacToe.Classes
                 and make sure that the game continues while there are unmarked spots on the board. 
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
-             */
-		//}
+         
+			*/
+			
+			int turn = 1;
+			while(!CheckForWinner(Board) && turn < 10)
+			{
+				Board.DisplayBoard();
+				NextPlayer().TakeTurn(Board);
+				turn++;
+				SwitchPlayer();
+
+			}
+			Board.DisplayBoard();
+			if (CheckForWinner(Board))
+			{
+				Console.WriteLine($"Congrats, {Winner} you win!");
+				return Winner;
+			}
+			else
+			{
+				Player current = new Player();
+				current.Name = "Keith";
+				Console.WriteLine($"Sorry, {current.Name} says no one wins!!");
+				return current;
+				
+			};
+			
+			
+		
+		}
 
 
 		/// <summary>
@@ -74,6 +103,7 @@ namespace Lab04_TicTacToe.Classes
 			// Given all the winning conditions, Determine the winning logic. 
 			for (int i = 0; i < winners.Length; i++)
 			{
+				
 				Position p1 = Player.PositionForNumber(winners[i][0]);
 				Position p2 = Player.PositionForNumber(winners[i][1]);
 				Position p3 = Player.PositionForNumber(winners[i][2]);
@@ -84,7 +114,11 @@ namespace Lab04_TicTacToe.Classes
 
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winner has been reached. 
-			
+				if(a == b && b == c)
+				{
+					return true;
+				}
+
 			}
 
 			return false;
