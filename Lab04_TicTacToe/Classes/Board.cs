@@ -28,9 +28,9 @@ namespace Lab04_TicTacToe.Classes
 			{
 				for (int j = 0; j < GameBoard.GetLength(1); j++)
 				{
-					Console.Write(string.Join(" ", GameBoard[i,j] ));
+					Console.Write(GameBoard[i,j] + " ");
 				}
-				Console.WriteLine();
+			Console.WriteLine();
 
 			}
 		
