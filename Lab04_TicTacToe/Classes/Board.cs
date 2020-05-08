@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace Lab04_TicTacToe.Classes
@@ -19,13 +20,18 @@ namespace Lab04_TicTacToe.Classes
 
 		public void DisplayBoard()
 		{
-			
+
 			//TODO: Output the board to the console
-			for(int i =0; i <3; i++)
+			//clear board new game
+			//Console.Clear();
+			for (int i =0; i < GameBoard.GetLength(0); i++)
 			{
+				for (int j = 0; j < GameBoard.GetLength(1); j++)
+				{
+					Console.Write(string.Join(" ", GameBoard[i,j] ));
+				}
 				Console.WriteLine();
-				Console.WriteLine();
-				Console.WriteLine();
+
 			}
 		
 		}
