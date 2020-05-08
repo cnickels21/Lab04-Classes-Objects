@@ -37,15 +37,8 @@ namespace Lab04_TicTacToe
             player2.IsTurn = false;
 
             Game newGame = new Game(player1, player2);
-            Player winner = newGame.Play();
-            /*if()
-            {
-                Console.WriteLine("No one wins, it's a draw!");
-            }
-            else
-            {
-                Console.WriteLine($"Woo! You win, congrats, {winner.Name}");
-            }*/
+           newGame.Play();
+        
 
         }
 
