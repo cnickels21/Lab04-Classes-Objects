@@ -29,5 +29,5 @@ Then select and open ```Lab04-Classes-Objects.sln```
 
 ## Iterations
 1. Chase: 1hr 20 min
-2. Marie: 
+2. Marie: 2hr 20 min
  
