@@ -3,8 +3,9 @@ Two player tic tac toe game.
 Parter: Marie Antons
 
 **Time Started: 3:30pm**
+**Break**
 **Time End: 10:30**
-*Total Time: 7 hours*
+*Total Time: 5-6 hours*
 
 ## Problem Domain
 Given starter code for a tic tac toe game that has known bugs in it, use TDD to verify functionality of the program and ultimately finish writing the console app to function as expected, catching edge cases \(using tests often\).  
