@@ -22,6 +22,7 @@ namespace Lab04_TicTacToe.Classes
 		{
 			PlayerOne = p1;
 			PlayerTwo = p2;
+			//Default constructor
 			Board = new Board();
 		}
 
@@ -62,6 +63,7 @@ namespace Lab04_TicTacToe.Classes
 			Board.DisplayBoard();
 			if (CheckForWinner(Board))
 			{
+				
 				Console.WriteLine($"Congrats, {Winner} you win!");
 				return Winner;
 			}

@@ -67,7 +67,7 @@ namespace Lab04_TicTacToe.Classes
 			{
 				board.DisplayBoard();
 				Console.WriteLine("This space is already occupied");
-				this.TakeTurn(board);
+				TakeTurn(board);
 			}
 		}
 	}
